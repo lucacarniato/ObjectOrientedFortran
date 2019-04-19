@@ -7,3 +7,5 @@ The model class “has” implementors, but in an abstract way, so one can “pl
 With careful choices on how the data is accessed in time-consuming loops, the overhead is minimal.
 
 Moreover the compilation time is likely to be less for the model class, which depends only on the abstractions (less “use module” statements).
+
+TODO: Add factories to reduce dependencies
