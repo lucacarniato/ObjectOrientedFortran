@@ -1,11 +1,10 @@
 # ObjectOrientedFortran
-An example on how to create, use and compose objects in Fortran with minimal overhead
-
+An example on how to create, use and compose objects in Fortran with minimal overhead.
 
 The model class “has” implementors, but in an abstract way, so one can “plug” different implementors (e.g. different numerical discretizations) without convoluted if statements. 
 
-With careful choices on how the data is accessed in time-consuming loops, the overhead is minimal.
+With careful choices on how the data is allocated and accessed in time-consuming loops, the overhead is minimal.
 
-Moreover the compilation time is likely to be less for the model class, which depends only on the abstractions (less “use module” statements).
+The model class only depends on interfaces and not on complex concrete modules (with data or function implementations), effectivly implementing the inversion of control principle. For large projects this avoids long compilation times and reduces the coupling between modules and functions.
 
-TODO: Add factories to reduce dependencies
+Add abstract factories
